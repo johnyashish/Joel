@@ -1,0 +1,142 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PG vs Hostel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏠 PG vs College Hostel</h1>
+    <button onclick="toggleDarkMode()">🌙 Toggle Mode</button>
+</header>
+
+<div class="buttons">
+    <button onclick="showPG()">PG</button>
+    <button onclick="showHostel()">Hostel</button>
+</div>
+
+<div class="container">
+
+    <!-- PG -->
+    <div id="pg" class="card active">
+        <h2>🏠 Paying Guest</h2>
+        <div class="item">💰 Cost: High</div>
+        <div class="item">🕊 Freedom: More</div>
+        <div class="item">🍽 Food: Better</div>
+        <div class="item">🔒 Privacy: High</div>
+        <div class="item">📍 Location: City</div>
+        <div class="item">⏰ Timing: Flexible</div>
+        <div class="item">🚿 Bathroom: Attached</div>
+        <div class="item">🧹 Cleanliness: Good</div>
+        <div class="item">📏 Rules: Less strict</div>
+        <div class="item">🛡 Security: Moderate</div>
+    </div>
+
+    <!-- Hostel -->
+    <div id="hostel" class="card">
+        <h2>🏫 College Hostel</h2>
+        <div class="item">💰 Cost: Low</div>
+        <div class="item">🕊 Freedom: Limited</div>
+        <div class="item">🍽 Food: Average</div>
+        <div class="item">🔒 Privacy: Low</div>
+        <div class="item">📍 Location: Campus</div>
+        <div class="item">⏰ Timing: Fixed</div>
+        <div class="item">🚿 Bathroom: Shared</div>
+        <div class="item">🧹 Cleanliness: Moderate</div>
+        <div class="item">📏 Rules: Strict</div>
+        <div class="item">🛡 Security: High</div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html><style>body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    transition: 0.3s;
+}
+
+/* Dark mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #00b4d8;
+    color: white;
+}
+
+.buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+    background: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.card.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Items */
+.item {
+    padding: 8px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}</style><script>function showPG() {
+    document.getElementById("pg").classList.add("active");
+    document.getElementById("hostel").classList.remove("active");
+}
+
+function showHostel() {
+    document.getElementById("hostel").classList.add("active");
+    document.getElementById("pg").classList.remove("active");
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}</script>
